@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@redux/*": ["./redux/*"],
+      "@request/*":["./request/*"],
+      "@components/*":["./app/components/*"]
+    }
+  }
+}
