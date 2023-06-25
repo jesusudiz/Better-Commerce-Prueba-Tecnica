@@ -7,10 +7,10 @@ const communes = './src/database/communes.csv';
 async function  main(){
 
     try {
-        await sequelize.sync({force:false});
+        await sequelize.sync({force:true});
         console.log('Connection has been established successfully.');
 
-        //await CargarDatos(regions,communes); // *descomentar esta linea de codigo para cargar datos en la base de datos por primera vez
+        await CargarDatos(regions,communes); // *descomentar esta linea de codigo para cargar datos en la base de datospor primera vez
 
         app.listen(3001);
         console.log("server is listening on port 3001")

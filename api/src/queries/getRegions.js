@@ -6,17 +6,18 @@ const allRegions = async () => {
   return data;
 }
 
-const getRegion = async (id) => {
-    const data = await Region.findByPk(id,{
-        include:{
-            model:Commune,
-            attributes:['commune']
-        }
-    })
+const getCommunesByRegion = async (id) => {
+    const data = await Commune.findAll({
+        where: {
+          region_id: id,
+        },
+        attributes: [ 'commune'],
+      });
+    console.log(data)
     return data;
 }
 
 module.exports={
     allRegions,
-    getRegion
+    getCommunesByRegion
 }
