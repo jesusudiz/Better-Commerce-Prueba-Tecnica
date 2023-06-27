@@ -26,7 +26,7 @@ export function CharacterList({ filter, actions }) {
         };
 
         fetchData();
-    }, [currentPage, dispatch]);
+    }, [currentPage, dispatch,getInfo,reduxAction]);
 
     return (
         <main className="grid justify-center pt-12 bg-black h-5/6 style={{ minHeight: '700px', maxHeight: '100%' }}">

@@ -51,7 +51,7 @@ const Regions = () => {
                 >
                     <option value="">Selecciona una región</option>
                     {allRegions.map((reg) => (
-                        <option key={reg.region} value={reg.id}>{reg.region}</option>
+                        <option key={reg.id} value={reg.id}>{reg.region}</option>
                     ))}
                 </select>
        
