@@ -1,18 +1,15 @@
-// import {useSelector,useDispatch} from "react-redux";
-// import {} from "@redux/charactersSlice"
+"use client"
 
-const fetchData=async()=> {
-fetch("https://rickandmortyapi.com/api/character?page=1")
-.then(response=>response.json())
-.then(data=>data)
-}
+import { addPersonajes } from "@redux/charactersSlice";
+import { getCharacters } from "@request/getDataApi";
+import { CharacterList } from "../components/viewcards/CharacterList";
 
 
 export default async function Home() {
-  const data = await fetchData();
+  const Characters = getCharacters;
+  const sendAction = addPersonajes;
+
   return (
-    <main className="flex ">
-      {data.results.map(item=>(<p>{item.name}</p>))}
-    </main>
+    <CharacterList filter={Characters} actions={sendAction} />
   )
 }

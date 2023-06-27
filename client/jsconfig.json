@@ -3,7 +3,7 @@
     "paths": {
       "@redux/*": ["./redux/*"],
       "@request/*":["./request/*"],
-      "@components/*":["./app/components/*"]
+      "@components/*":["./components/*" ]
     }
   }
 }
